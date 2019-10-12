@@ -1,44 +1,112 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Review
 
-## Available Scripts
+# Assignment
 
-In the project directory, you can run:
+For the assignment we created a simple form to save a review via the API (which is included in the assignment).
+We only created a starting point so the form is not doing anything yet.
 
-### `yarn start`
+The reviews which are saved should be displayed in a list below the form.
+We already created an example of how to display the reviews.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+It is required to use Redux for handling the state.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Must have:
 
-### `yarn test`
+- Saving the reviews
+- Delete the reviews using a button
+- Form validation
+- Pagination (5 reviews per page)
+- Success message when a review is saved
+- Upgrade the dependecies to the last version
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Bonus points:
 
-### `yarn build`
+- Fake loading state by implementing timeout of 3 seconds
+- Replace Bootstrap with Material UI (https://material-ui.com/) or with Styled Components (https://www.styled-components.com/) and motivate why you picked one over the other.
+- Add some tests using Jest (https://jestjs.io/) and if necessary Enzyme (https://airbnb.io/enzyme/). It is not nessecary to have 100% code coverage - just show us that you understand how to write proper tests.
+- Create a Dockerfile to run the project
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Extra bonus points (in an other branch):
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Create an extra branch where you migrate the complete project to Next.js 9 and are able to statically export the project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Feel free to add your own features. There is no need to over-engineer!
 
-### `yarn eject`
+If you have any questions feel free to e-mail Mujib (mujib@fixico.nl).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Git
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Create a seperate branch (the name does not matter) to work in. Once you are finished please create a pull request so we can review your code.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Use clear commit messages and dont worry about having many commits where you change things around often.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Installation
 
-## Learn More
+**Note**: We verified the assignment using npm 6.4.1 and node 11.3.0. However, it should also work on older versions.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the project
+2. Use `npm install` to install the dependencies.
+3. Run `npm start` to launch the app. This should open your browser. If not, open http://localhost:3000.
+4. Run `npm run api` in a seperate window/tab to start the API.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# API
+
+We use https://github.com/typicode/json-server for the test API.
+
+## GET /posts
+
+Retrieves all posts.
+
+### Response
+
+```json
+[
+  {
+    "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "id": 1,
+    "rating": "3"
+  },
+  {
+    "body": "Donec mattis, quam eget mattis pretium, nisi elit pellentesque sapien, id consequat eros risus vel neque.",
+    "id": 2,
+    "rating": "5"
+  }
+]
+```
+
+## POST /posts
+
+### Request
+
+```json
+{
+  "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+  "rating": 4
+}
+```
+
+### Response
+
+```json
+{
+  "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+  "rating": "4",
+  "id": 3
+}
+```
+
+## DELETE /posts/{id}
+
+### Request
+
+```json
+{}
+```
+
+### Response
+
+```json
+{}
+```
+
+(Yes, the request and response are empty)

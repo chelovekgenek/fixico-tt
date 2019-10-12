@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  sample:
+    container_name: fixico-tt
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000

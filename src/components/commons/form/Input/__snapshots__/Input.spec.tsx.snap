@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render 1`] = `
+<Styled(WithStyles(ForwardRef(TextField)))
+  error={false}
+  id="input"
+  label="input"
+  onBlur={[MockFunction]}
+  onChange={[MockFunction]}
+  value="value"
+/>
+`;
+
+exports[`Input should render errors 1`] = `
+<Styled(WithStyles(ForwardRef(TextField)))
+  error={true}
+  helperText="error"
+  id="input"
+  label="input"
+  onBlur={[MockFunction]}
+  onChange={[MockFunction]}
+  value="value"
+/>
+`;

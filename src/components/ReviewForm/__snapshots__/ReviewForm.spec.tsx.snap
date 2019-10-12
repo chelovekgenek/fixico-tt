@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReviewForm should render 1`] = `
+<Styled(Form)>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    justify="space-between"
+  >
+    <Styled(WithStyles(ForwardRef(Grid)))
+      item={true}
+    >
+      <Input
+        label="Body"
+        name="body"
+      />
+    </Styled(WithStyles(ForwardRef(Grid)))>
+    <Styled(WithStyles(ForwardRef(Grid)))
+      item={true}
+    >
+      <Rating
+        label="Rating"
+        name="rating"
+      />
+    </Styled(WithStyles(ForwardRef(Grid)))>
+    <Styled(WithStyles(ForwardRef(Grid)))>
+      <WithStyles(ForwardRef(Button))
+        color="primary"
+        disabled={true}
+        onClick={[Function]}
+        variant="contained"
+      >
+        Create
+      </WithStyles(ForwardRef(Button))>
+    </Styled(WithStyles(ForwardRef(Grid)))>
+  </WithStyles(ForwardRef(Grid))>
+</Styled(Form)>
+`;

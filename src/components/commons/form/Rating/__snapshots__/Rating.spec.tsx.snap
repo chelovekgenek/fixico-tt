@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rating should render 1`] = `
+<Styled(Styled(MuiBox))
+  borderColor="transparent"
+  component="fieldset"
+>
+  <Styled(WithStyles(ForwardRef(Typography)))
+    component="legend"
+  >
+    rating
+  </Styled(WithStyles(ForwardRef(Typography)))>
+  <WithStyles(ForwardRef(Rating))
+    id="rating"
+    name="rating"
+    onBlur={[MockFunction]}
+    onChange={[MockFunction]}
+    value={5}
+  />
+</Styled(Styled(MuiBox))>
+`;
